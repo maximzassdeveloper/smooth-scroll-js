@@ -1,0 +1,45 @@
+{
+  "name": "smooth-scroll-js",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maximzassdeveloper/smooth-scrolling"
+  },
+  "description": "A lightweight library for smooth scrolling",
+  "author": "Maxim Zass (https://maximzass.ru/)",
+  "license": "MIT",
+  "keywords": [
+    "scroll",
+    "smooth",
+    "typescript"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "pnpm prebuild && rollup -c --configPlugin typescript --forceExit"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.28",
+    "esbuild": "^0.20.2",
+    "rollup": "^4.13.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "shx": "^0.3.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
